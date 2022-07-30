@@ -30,7 +30,7 @@ class Student : private Person {
             int roll_no = 15;
         }
         void display () {
-            cout<<"The informations of the Student are \nName : "<<name<<"\nAge : "<<age<<"\nLevel :"<<level<<"\nRoll Number : "<<roll_no<<endl;
+            cout<<"The informations of the Student are \nName : "<<*name<<"\nAge : "<<age<<"\nLevel :"<<*level<<"\nRoll Number : "<<roll_no<<endl;
         }
 };
 class Empolyee : private Person {
@@ -45,12 +45,13 @@ class Empolyee : private Person {
 
         }
         void display () {
-            cout<<"The informations of the Employee are \nName : "<<name<<"\nAge : "<<age<<"\nDepartment :"<<department<<"\nEmployee's Id : "<<employee_id<<endl;
+            cout<<"The informations of the Employee are \nName : "<<*name<<"\nAge : "<<age<<"\nDepartment :"<<*department<<"\nEmployee's Id : "<<employee_id<<endl;
         }
 };
 
 int main()
 {
+    system("cls");
     Student s;
     s.display();
 
@@ -58,4 +59,5 @@ int main()
     e.display();
 
     return 0;
+
 }
