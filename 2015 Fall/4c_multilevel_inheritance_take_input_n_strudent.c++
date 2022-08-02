@@ -27,7 +27,7 @@ class declare
 };
 
 //aba multilevel inheritance ma ta ambiguty problem aehalxa taevayara hami virtual keyword ko use gari halxam
-class input:virtual public declare
+class input:public declare
 {
     public:
     input()
@@ -42,7 +42,7 @@ class input:virtual public declare
     }
 };
 
-class info:virtual public declare,virtual public input
+class info:public input
 {
     public:
     info()
