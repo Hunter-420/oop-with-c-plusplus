@@ -26,7 +26,6 @@ class declare
     }
 };
 
-//aba multilevel inheritance ma ta ambiguty problem aehalxa taevayara hami virtual keyword ko use gari halxam
 class input:public declare
 {
     public:
