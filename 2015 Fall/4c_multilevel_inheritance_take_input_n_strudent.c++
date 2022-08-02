@@ -47,6 +47,9 @@ class info:virtual public declare,virtual public input
             cout<<"Age : "<<age[i]<<endl;
             cout<<"College : "<<college[i]<<endl<<endl;
         }
+    delete [] name;
+    delete [] age;
+    delete [] college;
     }
 };
 
