@@ -6,10 +6,16 @@ using namespace std;
 class declare
 {
     protected:
+    //suruma declare garne n lae
     int n;
+
+    //aba hami dynamically allocate garxau hae
     string *name=new string[n];
     int *age=new int[n];
     string *college=new string[n];
+
+    //aba n ko value ta lina paro aba hami haru sabbae kam ko lagi constructor ko use garxau hae tesle garda main function 
+    //ma call garna easy hunxa
     public:
     declare()
     {
@@ -20,6 +26,7 @@ class declare
     }
 };
 
+//aba multilevel inheritance ma ta ambiguty problem aehalxa taevayara hami virtual keyword ko use gari halxam
 class input:virtual public declare
 {
     public:
@@ -47,6 +54,8 @@ class info:virtual public declare,virtual public input
             cout<<"Age : "<<age[i]<<endl;
             cout<<"College : "<<college[i]<<endl<<endl;
         }
+    
+    //memory leak huna bata bachna ko lagi delete ni gardina parxa
     delete [] name;
     delete [] age;
     delete [] college;
@@ -56,6 +65,8 @@ class info:virtual public declare,virtual public input
 int main()
 {
     system("cls");
+    //hamlae thaha xa constructor call garda mathibata talatira call hunxa sequence ma hunxa
+    //for eg yadi hamle sab vanda last derived class ko object banayo vane base class ko constructor call hudae auxa
     info h;
     return 0;
 }
